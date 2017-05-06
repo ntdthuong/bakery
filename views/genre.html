@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="leftbar" ng-init="getGenres()">
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Categogies</div>
+                <div class="panel-body genres">
+                    <ul>
+                        <li ng-repeat=" genre in genres "><a href="#/books/category/{{genre._id}}">{{genre.name}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightbar" ng-init="getBookByGenre()">
+        <div class="row promotion">
+            <h2 class="typebook">{{book[0].genre.name}}</h2>
+            <div class="col-sm-6 col-lg-4 items" ng-repeat=" book in books | limitTo:3 ">
+                <div class="imgBook">
+                    <a ng-click="show " href="#/books/details/{{book._id}} ">
+                        <img class="img-responsive " ng-src="{{book.images.main}} " alt="Book ">
+                    </a>
+                </div>
+                <div class="information ">
+                    <button href="# " class="btn heart "><span class="fa fa-heart "></span></button>
+                    <button href="# " class="btn addCart "><span class="glyphicon glyphicon-shopping-cart " ></span></button>
+                    <a ng-click="show " href="#/books/details/:id ">
+                        <h4 class="titlebook ">{{book.title}}</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
