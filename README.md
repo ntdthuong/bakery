@@ -1,2 +1,2 @@
-# bakery
-html cover demo bakery
+# book
+html cover demo book
